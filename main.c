@@ -4,7 +4,7 @@
 int main(void)
 {
   struct Point food_points[5] = { {18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38} };
-  struct Point current_location = {18, 86};
+  struct Point current_location = {69, 7};
   struct Point closest_food_location;
   int points_length = sizeof(food_points) / 8;
   
