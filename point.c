@@ -16,8 +16,7 @@ void get_closest_food(struct Point food_points[], int points_length, struct Poin
     distance = sqrt(square_of_diff_of_x + square_of_diff_of_y);
     if(minimum_distance > distance){
       minimum_distance = distance;
-      closest_food_location->x = food_points[index].x;
-      closest_food_location->y = food_points[index].y;
+      *closest_food_location = *food_points;
     }
   }
 }
