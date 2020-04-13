@@ -7,7 +7,7 @@ void get_closest_food(struct Point food_points[], int points_length, struct Poin
   int distance;
   double minimum_distance = INFINITY;
 
-  FOR_EACH_FOOD_POINT
+ for(int index = 0; index < points_length; index++)
   {
     int diff_of_x = (current_location.x - food_points[index].x);
     int diff_of_y = (current_location.y - food_points[index].y);    
