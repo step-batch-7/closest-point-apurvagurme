@@ -13,10 +13,11 @@ Location of organism: [10 94],  Closest food target : [18 76]
 Location of organism: [36 27],  Closest food target : [55 38]
 */
 
-struct Point
+typedef struct 
 {
   int x;
   int y;
-} ;
+} Point;
 
-void get_closest_food(struct Point food_points[], int points_length, struct Point current_location, struct Point *closest_food_location);
+int distance (Point current_location, Point food_points);
+void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location);
