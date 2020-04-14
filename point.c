@@ -13,12 +13,12 @@ void get_closest_food(Point food_points[], int points_length, Point current_loca
   *closest_food_location = food_points[0];
 
   for(int index = 1; index < points_length; index++)
+  {
+    int current_distance = distance(current_location, food_points[index]);
+    if(minimum_distance > current_distance)
     {
-      int current_distance = distance(current_location, food_points[index]);
-      if(minimum_distance > current_distance)
-      {
-        minimum_distance = current_distance;
-        *closest_food_location = *food_points;
-      }
+      minimum_distance = current_distance;
+      *closest_food_location = food_points[index];
+    }
   }
 }
